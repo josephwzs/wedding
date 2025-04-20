@@ -1,0 +1,224 @@
+#slider {
+    margin: 0 auto;
+    width: 20rem;
+    max-width: 100%;
+    text-align: center;
+}
+#slider input[type=radio] {
+    display: none;
+}
+#slider label {
+    cursor:pointer;
+    text-decoration: none;
+}
+#slides {
+    position: relative;
+}
+.slide{
+    border-radius: 10px;
+}
+.slide-content{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.slide-content img{
+    position: absolute;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    width: 20rem;
+
+}
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+#slide1:checked ~ #slides .inner {
+    margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+#slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+}
+#slides .inner {
+    transition: margin-left 300ms cubic-bezier(0.77,0,.175,1);
+    width: 400%;
+    line-height: 0;
+    height: 20rem;
+}
+#slides .slide {
+    width: 25%;
+    float: left;
+    display: block;
+    height: 100%;
+    color: #fff;
+}
+.slide_1{
+    background: #00171F;
+}
+.slide_2{
+    background: #003459;
+}
+.slide_3{
+    background: #007EA7;
+}
+.slide_4{
+    background: #00A8E8;
+}
+/* .slide-content {
+    padding: 10px;
+} */
+#controls {
+    margin: -8rem 0 0;
+    width: 100%;
+    height: 0;
+    z-index: 3;
+    position: relative;
+}
+#slider #controls label {
+    transition: opacity 0.2s ease-out;
+    width: 1rem;
+    height: 1rem;
+    opacity: 0;
+}
+#slider:hover #controls label{
+    transition: opacity 0.2s ease-out;
+    width: 1rem;
+    height: 1rem;
+    opacity: 0.5;
+}
+/* #controls label {
+    transition: opacity 0.2s ease-out;
+    width: 1rem;
+    height: 1rem;
+    opacity: .4;
+} */
+#slider:hover #controls label:hover {
+    opacity: 1;
+}
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4){
+background: url("/assets/img/right-arrow.svg") no-repeat center;
+position: absolute;
+z-index: 20;
+height: 1.2rem;
+width: 1.2rem;
+right: 1.5rem;
+top: -3rem;
+background-color: rgba(252,252,242,0.9);
+background-size: 1rem;
+background-origin: content-box;
+padding: 0.5rem;
+border-radius: 3rem;
+}
+#slide2:checked ~ #controls label:nth-child(1),
+#slide3:checked ~ #controls label:nth-child(2),
+#slide4:checked ~ #controls label:nth-child(3){
+background: url("/assets/img/left-arrow.svg") no-repeat center;
+position: absolute;
+z-index: 20;
+height: 1.2rem;
+width: 1.2rem;
+left: 1.5rem;
+top: -3rem;
+background-color: rgba(252,252,242,0.9);
+background-size: 1rem;
+background-origin: content-box;
+padding: 0.5rem;
+border-radius: 3rem;
+}
+#controls img{
+    height: 2rem;
+    background-color: rgba(252,252,242,0.5);
+    background-size: 5rem;
+    padding: 0.5rem;
+    border-radius: 3rem;
+}
+#bullets{
+    margin: 6rem 0 0;
+    text-align: center;
+    position: relative;
+}
+#bullets label {
+    display: inline-block;
+    width: .6rem;
+    height: .6rem;
+    border-radius: 100%;
+    background: rgba(253,253,253, 0.5);
+    margin: 0.3rem;
+    z-index: 30;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4){
+    background: rgba(253,253,253);
+}
+/* Text Box */
+.title-box{
+    text-align: left;
+}
+.title-box h4{
+    font-size: 1rem;
+    color: rgba(66, 66, 66, .9);
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+.title-box p{
+    font-size: 1rem;
+    color: rgba(66, 66, 66, .7);
+    padding: 0;
+    margin: 0;
+}
+/* image-model */
+/* @keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+} */
+.imageModel{
+    position: absolute;
+    bottom: 0;
+    margin: .65rem;
+    border: double .1em transparent;
+    background-image: conic-gradient(white, white), 
+                      conic-gradient(from 0deg, red, yellow, lime, aqua, blue, magenta, red);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    z-index: 31;
+    transition:0.2s ease-out;
+}
+.imageModel:hover{
+    border: double .15em transparent;
+    margin: .5rem;
+}
+.imageModel img{
+    height: 3rem;
+    border-radius: 100%;
+}
+
+
+

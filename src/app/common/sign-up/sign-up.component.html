@@ -1,0 +1,114 @@
+
+<app-base-form class="signUp"
+#baseFormComponent
+[form]= "this"
+[service]= "signUpService"
+
+>
+<form [formGroup] = "formGroup">
+    <div class = "row">
+        <app-form-field-input
+        [label] = "screenLabels['lbl_userId']"
+        [placeholder] = "screenLabels['lbl_userId']"
+        [required] = 'true'
+        formControlName = "userId"
+        [mode] = "'input'"
+        [errorMsg]= "getErrorMessage('userId')"
+        >
+        </app-form-field-input>
+    </div>
+    <div class = "row">
+        <app-form-field-input
+        [label] = "screenLabels['lbl_name']"
+        [placeholder] = "screenLabels['lbl_name']"
+        [required] = 'true'
+        formControlName = "name"
+        [errorMsg]= "getErrorMessage('name')"
+        >
+        </app-form-field-input>
+    </div>
+    <div class = "row">
+        <app-form-field-input
+        [label] = "screenLabels['lbl_email']"
+        [placeholder] = "screenLabels['lbl_email']"
+        formControlName = "email"
+        [errorMsg]= "getErrorMessage('email')"
+        >
+        </app-form-field-input>
+    </div>
+    <div class = "row">
+        <app-form-field-input
+        [label] = "screenLabels['lbl_phoneNo']"
+        [placeholder] = "screenLabels['lbl_phoneNo']"
+        formControlName = "phoneNo"
+        [errorMsg]= "getErrorMessage('phoneNo')"
+        >
+        </app-form-field-input>
+    </div>
+    <div class = "row">
+        <app-form-field-input
+        [label] = "screenLabels['lbl_password']"
+        [placeholder] = "screenLabels['lbl_password']"
+        formControlName = "password"
+        [required] = 'true'
+        [errorMsg]= "getErrorMessage('password')"
+        >
+        </app-form-field-input>
+    </div>
+    <div class="addCreditCard">
+    <label>
+        {{ screenLabels['lbl_creditCard'] }}
+    </label>
+    <p>
+        <button
+        type = "button"
+        class = "addCardButton"
+        (click) = "addCreditCard()"
+        >
+        
+        <i class="fa fa-plus"></i>&nbsp; {{  screenLabels['btn_add']  }}
+        </button>
+    </p>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>{{ screenLabels['lbl_bankName'] }}</th>
+                <th>{{ screenLabels['lbl_cardNumber'] }}</th>
+                <th>{{ screenLabels['lbl_expiryDate'] }}</th>
+                <th>{{ screenLabels['lbl_ccv'] }}</th>
+                <th>{{ screenLabels['lbl_actions'] }}</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <ng-container *ngFor= "let i of card.controls; let rowIndex = index">
+                <tr [formGroupName] = "rowIndex">
+                    <td>{{rowIndex + 1}}</td>
+                    <td>{{i.get("bankName")?.value}}</td>
+                    <td>{{i.get("cardNumber")?.value}}</td>
+                    <td>{{i.get("cardExpiry")?.value}}</td>
+                    <td>{{i.get("cardCcv")?.value}}</td>
+                    <td class="sticky-col" style = "cursor: pointer">
+                        <div class= "text-primary action text-danger" (click) = "deleteCreditCardBase(rowIndex)" >
+                    <i class= "far fa-trash-alt"></i> {{screenLabels["lbl_remove"]}}
+                        </div>
+                    </td>
+                </tr>
+
+            </ng-container>
+        </tbody>
+    </table>
+
+
+
+</form>
+
+
+</app-base-form>
+    <app-card 
+    #creditCardModal
+    (add)= "addCreditCardBase($event)"
+    >
+    </app-card>

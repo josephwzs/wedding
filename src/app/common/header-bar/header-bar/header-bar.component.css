@@ -1,0 +1,181 @@
+.logo{
+    width: 40px;
+    height: 40px;
+    margin-right: 9rem;
+}
+header { 
+    position: relative;
+    padding: 0 2rem;
+    z-index: 99;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgba(66, 66, 66, .9);
+    font-size: 1rem;
+    font-weight: bolder;
+    /* transform-origin: bottom right; */
+    transition: 0.3s;
+
+}
+.dropdown-menu.programmes a:hover{
+    border-bottom: 3px solid  rgba(179, 179, 179, 0.4);
+}
+
+
+.item::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: rgba(179, 179, 179, 0.4);
+    transition: 0.5s;
+    display:block;
+    border: none; 
+    /* margin: auto; -- to make it come from the middle */
+}
+.item:hover::after{
+    width: 100%;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    margin-bottom: -60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.navbar .items{
+    padding-top: 1rem;
+    display: flex;
+    gap: 2rem;
+}
+.navbar .toggle_btn {
+    display: none;
+}
+.bars{
+    /* color: #dcdee0; */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.login{
+    background-color: rgba(179, 179, 179, 0.4);
+    color: rgba(66, 66, 66, .9);
+    padding: 0.5rem 1.9rem;
+    border: rgba(179, 179, 179, 0.4) 2px solid;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+    margin-left: 1rem;
+}
+.login:hover{
+    scale: 1.05;
+}
+.login:active{
+    scale: 0.95;
+}
+.signUp{
+    border: rgba(179, 179, 179, 0.4) 2px solid;
+    color: rgba(66, 66, 66, .9);
+    padding: 0.5rem 1.5rem;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3;
+}
+.signUp:hover{
+    background-color: rgba(179, 179, 179, 0.4);
+}
+.dropdown-menu.programmes.show{
+    display: block;
+    background-color: rgba(255, 255, 255, .10);
+    left: auto;
+    border-radius: 10px; 
+    border: 2px solid rgba(255, 255, 255, .5);
+}
+/* .dropdown-item{
+    border-bottom: 3px solid   rgba(255, 255, 255, 0);
+} */
+.dropdown-item:hover{
+    background-color: transparent;
+    color: rgba(66, 66, 66, .9);
+}
+.dropdown-divider{
+    background-color: rgba(255, 255, 255, .5);
+    height: 2px;
+}
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0px;
+    border-radius: 20px; 
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    display: none;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 0px;
+}
+.dropdown_menu .items{
+    padding: 0px;
+}
+.item{
+    border-bottom: 3px solid   rgba(255, 255, 255, 0);
+}
+.dropdown_menu.open{
+    height: 328px;
+    border: 2px solid rgba(255, 255, 255, .5);     
+}
+.dropdown_menu.open .item::after{
+    margin: auto; 
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .login, .dropdown_menu .signUp{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+/* responsive page */
+@media(max-width: 992px) {
+    .navbar .items,.navbar .login, .navbar .signUp{
+        display:none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+    
+}
+@media(max-width: 576px) {
+    /* .navbar .items,.navbar .login{
+        display:none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+    } */
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+    
+}

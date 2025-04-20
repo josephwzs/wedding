@@ -1,0 +1,36 @@
+<div class="form-Input" [ngClass]= "{ 'd-none': mode != 'input'}">
+    <label [for] = "elementId" class = "form-label" [ngClass]= "{ 'd-none': !label}">
+        {{ label }}
+        <i *ngIf= "required" class = "required">*</i>
+        <i *ngIf= "help" class = "fa fa-info-circle" [ngbTooltip]= "help"></i>
+    </label>
+    <input 
+        #input
+        [id]= "elementId"
+        type = "text"
+        class = "form-control"
+        (keyup) = "onTextKeyUp($event)"
+        [ngClass] = "inputClass"
+        [value] = "value"
+        [placeholder]= "placeholder || ''"
+        [required]= "required"
+        [readonly]= "readonly"
+        [disabled]= "disabled"
+        [type] = "type"
+        (blur) = "onBlur()"
+        (change) = "onChange($event)"
+
+    >
+    <div class="invalid-feedback" [ngClass] = "{'d-block' : errorMsg}">
+        <!-- <i class = "fas fa-exclamation-circle"></i> -->
+        <span>{{ errorMsg }}</span>
+    </div>
+</div>
+<div class="view-mode" [ngClass]= "{'d-none': mode == 'input' }">
+    <label class = "form-label" [ngClass]= "{ 'd-none': label}" >
+        {{ label }}
+        <i *ngIf= "required" class = "required">*</i>
+        <i *ngIf= "help" class = "fa fa-info-circle" [ngbTooltip]= "help"></i>
+    </label>
+    <p>{{ value }}</p>
+</div>

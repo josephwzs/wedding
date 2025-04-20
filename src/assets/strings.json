@@ -1,0 +1,34 @@
+{
+    "lbl_badCredentials": "Invalid Login. Please try again",
+    "lbl_badPassword": "Incorrect Password. Please try again",
+    "lbl_password": "Password",
+    "lbl_userName": "Username",
+    "lbl_userId": "User ID",
+    "lbl_name": "Name",
+    "lbl_email": "Email Address",
+    "lbl_phoneNo": "Mobile Number",
+    "lbl_bankName": "Bank Name",
+    "lbl_cardNumber": "Card Number",
+    "lbl_expiryDate": "Expiry Date",
+    "lbl_ccv": "CCV",
+    "lbl_creditCard": "Credit Card",
+    "lbl_delete": "Delete",
+    "lbl_remove": "Remove",
+    "lbl_actions": "Action(s)",
+    
+
+    "msg_err_required":"This field is required", 
+    "msg_err_maxlength_specific":"Max length of {0} characters reached.",
+    "msg_err_minlength_specific":"Minimum length of {0} characters needed.",
+
+
+
+
+    "btn_submit": "Submit",
+    "btn_cancel": "Cancel",
+    "btn_back": "Back",
+    "btn_add": "Add",
+    "btn_ADD": "ADD"
+
+
+}

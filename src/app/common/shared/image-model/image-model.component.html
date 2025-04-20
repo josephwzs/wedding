@@ -1,0 +1,40 @@
+<ng-template #imageModel let-model id="modelImage">
+   <div class="model-background">
+    <div class = "model-header">
+        <button type="button" class="close" aria-label="Close" (click)= "model.dismiss('Cross click')">
+            <span aria-hidden="true" class="x">&times;</span>
+        </button>
+        <div class="card">
+            <div class="cardProfile">
+                <div class="imageModel">
+                    <img [src] = "profileImage">
+                </div>
+                <h4 class="model-tutor">{{name}}</h4>
+                <p>Tutor</p>
+            </div>
+            <div class="cardInformation">
+                <div class="content">
+                    <p>Age: <span>{{age}}</span></p>
+                    <p>Race: <span>{{race}}</span></p>
+                    <p>Sex: <span>{{sex}}</span></p>
+                    <p>Years Tutoring: <span>{{yearsTeaching}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model-body"> 
+        <div class="tutorInformation">
+        <p><img class ="education" src="/assets/img/common-svg/education.svg">&nbsp; Where I went to School: {{school}}</p>
+        <p><img class ="country" src="/assets/img/common-svg/book.svg">&nbsp; What I studied: {{degree}}</p>
+        <p><img class ="language" src="/assets/img/common-svg/language.svg">&nbsp; Speaks {{language}}</p>
+        <p><img class ="country" src="/assets/img/common-svg/country.svg">&nbsp; Stays at {{country}}</p>
+        <p><img class ="working" src="/assets/img/common-svg/working.svg">&nbsp; What I am doing: {{occupation}}</p>
+        <p><img class ="hobby" src="/assets/img/common-svg/hobby.svg">&nbsp; Things I like to do: {{hobby}}</p>
+        </div>
+        <div class="tutorReason">
+            <p>{{about}}</p>
+        </div>
+    </div>
+    </div> 
+
+</ng-template>

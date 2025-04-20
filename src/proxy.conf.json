@@ -1,0 +1,6 @@
+{
+    "/joseph/api/*":{
+        "target": "http://localhost:8095",
+        "secure": false
+    }
+}

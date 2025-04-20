@@ -1,0 +1,72 @@
+/* image-model */
+
+.model-background{    
+    background: linear-gradient(#f5ecdf, white);
+    border-radius: .5rem;
+}
+.close{
+    background-color: transparent;
+    border: none;
+    margin-left: .5rem;
+}
+.close:focus{
+    outline:none;
+    border: none;
+    text-decoration: none;
+}
+.x{
+    font-size: 2rem;
+}
+.imageModel{
+    position: relative;
+    transition:0.2s ease-out;
+}
+.imageModel img{
+    height: 8rem;
+    border-radius: 100%;
+}
+.card{
+    position: relative;
+    display: block;
+    margin: 3rem;
+    margin-top: 0rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cardProfile{
+    display: inline-block;
+}
+.cardProfile h4{
+    display: flex;
+    justify-content: center;
+    margin-top: .8rem;
+    margin-bottom: 0;
+    color: rgba(66, 66, 66, .9);
+}
+.cardProfile p{
+    color: rgba(66, 66, 66, .7);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.cardInformation{
+    display: inline-block;
+    position: absolute;
+    right: 2rem;
+    bottom: 3rem;
+    color: rgba(66, 66, 66, .7);
+}
+.cardInformation span{
+    color: rgba(66, 66, 66, .9);
+}
+.tutorInformation{
+    margin: 3rem;
+}
+.tutorInformation p{
+    color: rgba(66, 66, 66, .7);
+    font-size: .9em;
+}
+.tutorInformation p img{
+    height: 1.5rem;
+}

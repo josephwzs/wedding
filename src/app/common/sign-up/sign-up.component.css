@@ -1,0 +1,25 @@
+.signUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(#ffe1b5,white);
+}
+label{
+    font-size: .9em;
+    color: rgba(66, 66, 66, .9);
+    margin: 0.3rem;
+}
+.addCardButton{
+    margin: 0.3rem;
+    border-radius: 5px;
+    border: 2px solid rgba(66, 66, 66, .5);
+    background: transparent;
+    backdrop-filter: blur(60px);
+}
+.addCardButton:hover{
+    border: 2px solid rgba(66, 66, 66, .5);
+    background: rgba(66, 66, 66, .8);
+    backdrop-filter: blur(60px);
+    color: white
+}

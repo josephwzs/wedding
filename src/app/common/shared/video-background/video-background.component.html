@@ -1,0 +1,24 @@
+<div   #videoId  (onmousemove) = "videoMask($event)" (mouseout) ="mouseEntered = 0; dynamicBackGround = 'rgba(201, 201, 201, .9)'" (mouseover) ="mouseEntered = 1">
+<div class="video-mask" [ngStyle] = "{'background': dynamicBackGround}">
+    <p class = "mesage">
+        DISCOVER THE BEAUTY OF LEARNING
+    </p>
+</div>
+<div id="slider" class="videoSliders" >
+    <div id = "slides">
+        <div id="overflow">
+            <div class="inner">
+                <div class="slide slide_1">
+                    <div class="slide-content">
+                        <video #first_video autoplay muted onloadedmetadata="this.muted = true" loop >
+                            <source src="/assets/media/wedding.mp4" type="video/mp4">
+                        </video>
+                        <!-- <h4>Slide 1</h4>
+                        <p>Content for Slide 1</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+
+  
+  /* The track contains the images and scrolls continuously */
+  .slide-track {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll-left 40s linear infinite;
+  }
+  
+  .slider:hover .slide-track {
+    animation-play-state: paused;
+  }
+  
+
+  .slider {
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+    width: 80vw;
+    border-radius: 10px;
+  }
+
+
+  .slide-track img {
+    width: 20rem;
+    object-fit: cover;
+    margin-right: 1rem;
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .slide-track img:hover {
+    transform: scale(1.08);
+  }
+  
+  /* RESPONSIVE for smaller screens */
+  @media (max-width: 768px) {
+    .slide {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slide {
+      width: 150px;
+    }
+  }
+  
+  /* Infinite seamless scroll */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-336rem);
+    }
+  }
+  

@@ -1,0 +1,28 @@
+<app-form-layout class = "layout">
+<ng-container formContent>
+    <ng-content></ng-content>
+</ng-container>
+<ng-container actionCenter>
+    <div *ngIf = "!buttonHidden">
+    <button
+    *ngIf = "!isCancelHidden"
+    id = "cancel"
+    (click) = "onCancel()"
+    [disabled] = "!isCancelEnabled"
+    readonly = "!isCancelEnabled" 
+    >
+    {{ screenLabels['btn_cancel'] }}
+    </button>
+    <button
+    *ngIf = "!isSubmitHidden"
+    id = "submit"
+    (click) = "onSubmit()"
+    [disabled] = "!isSubmitEnabled()"
+    readonly = "!isSubmitEnabled()"
+    >
+    {{ screenLabels['btn_submit'] }}
+    </button>
+    </div>
+</ng-container>
+
+</app-form-layout>

@@ -1,0 +1,22 @@
+<div class="side-bar">
+    <div class = "top">
+        <div class="left">
+
+        </div>
+       <div class="right pointer ">  
+        <div class="smooth-hover" (click)="onSelect('RSVP')">RSVP</div>          
+        <div class="smooth-hover" (click)="onSelect('ABOUT')" >ABOUT</div>
+        <div class="smooth-hover" (click)="onSelect('Q&A')" >Q&A</div>
+        <div class="smooth-hover" (click)="onSelect('VENUE')">VENUE</div>
+        <!-- <div class="smooth-hover" (click)="onSelect('CONNECT')">CONNECT</div> -->
+        </div>
+    <div>
+    <div class = "bottom">
+        <div class="left">
+
+        </div>
+       <div class="right sound">
+        SOUND <span *ngIf="!isMuted" class="pointer" (click)="onClick()">ON</span> <span *ngIf="isMuted" class="pointer" (click)="offClick()">OFF</span>
+       </div>
+    </div>
+</div>

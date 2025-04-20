@@ -1,0 +1,61 @@
+
+ 
+ <div class="limiter">
+     <div class="background" src="/assets/img/white-background.jpg">
+    <div class="card" >
+      <!-- <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+      <p id="profile-name" class="profile-name-card"></p> -->
+      <form [formGroup] = "loginForm">
+          <span class="login-title">LOGIN</span>
+        <div class="form-group">
+            <h4 class="form-label">{{screenLabels['lbl_userName']}}</h4>
+            <!-- <img src="/assets/img/person.svg"> -->
+            <input 
+            class="form-control" 
+            name="userId" 
+            formControlName = "userId"
+            required = true
+            (onChange) = change($event)
+            placeholder = 'Type your username'>
+            <div class="error" *ngIf= "loginForm.controls['userId'].touched && loginForm.controls['userId'].invalid">
+                <span *ngIf = "loginForm.controls['userId'].errors?.['required']">This field is required</span>
+                <span *ngIf = "loginForm.controls['userId'].errors?.['minlength']">Input too short</span>
+                <span *ngIf = "loginForm.controls['userId'].errors?.['maxlength']">Field length exceeded</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <h4 class="form-label">{{screenLabels['lbl_password']}}</h4>
+            <input 
+            class="form-control" 
+            name="passWord" 
+            formControlName = "passWord"
+            required = true
+            (onChange) = change($event)
+            placeholder = 'Type your password'>
+            <div class="error" *ngIf= "loginForm.controls['passWord'].touched && loginForm.controls['passWord'].invalid">
+                <span *ngIf = "loginForm.controls['passWord'].errors?.['required']">This field is required</span>
+                <span *ngIf = "loginForm.controls['passWord'].errors?.['minlength']">Input too short</span>
+                <span *ngIf = "loginForm.controls['passWord'].errors?.['maxlength']">Field length exceeded</span>
+            </div>
+        </div>
+    <span class="error">{{inlineError}}</span>
+    &nbsp;&nbsp;
+    <!-- <div id="remember" class="checkbox">
+        <label>
+        <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div> -->
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary" (click)="logIn()"><span class='login'>LOGIN</span></button>
+    </div>
+        &nbsp;&nbsp;
+        <a href="/signUp" class="create-user">SIGN UP</a>
+
+
+    </form>
+      <!-- /form -->
+
+    </div>
+    </div>
+</div>
+    <!-- /card-container -->

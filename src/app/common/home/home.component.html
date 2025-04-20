@@ -1,0 +1,269 @@
+<div class="limiter">
+        <div class="background">
+            <div class = "overlay">
+                <div class = "row">
+                    <div class = "col">
+                        <div class="feature-image">
+                            <div class="image-1">
+                            <img class ="banner" src="/assets/img/banner.jpg">
+                            <img class="play-btn" src="/assets/img/play.png" (click) = "openVideo($event)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col">
+                        <div class="text-1">
+                            <h4>Learn the Sweet Science</h4>
+                            <h6>by Joseph Wong</h6>
+                            <p>Here at The Sweet Science Tuition, we take learning 
+                            <br> seriously. We dive into different topics intentionally 
+                            <br> and structure our lessons accordingly to achieve better
+                            <br> academic success. We are experienced, efficient and 
+                            <br> commited to your educational journey.
+                            </p>
+                            <a class="signUp" href="/signUp">Sign Up</a>
+                            <a class="aboutUs" href="#">Learn more &#62;</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class = "video-player" [ngClass] = "{'d-none': !isVideoOpen }">
+                    <video #first_video width="auto" controls>
+                        <source src="/assets/media/logo.mp4" type="video/mp4">
+                    </video>
+                    <img class="close-btn" src="/assets/img/close.png" (click) = "closeVideo($event)">
+                </div>
+            </div>
+        </div>
+
+        <section class = "programmes">
+            <div>
+                <div class="text-2">
+                    <h4>Explore Courses</h4>
+                    <p> A learning programme catered for every student</p>
+                </div>
+                <div class="filter"> 
+                    <div class="primary-not-selected" *ngIf = !primarySelected (click) = "selectPrimary($event)">
+                        <img class ="primary-photo" src="/assets/img/person-down-primary.svg">
+                        <p>Primary</p>
+                    </div>
+                    <div class="primary-selected" *ngIf = primarySelected>
+                        <img class ="primary-photo" src="/assets/img/person-fill-down-primary.svg" >
+                        <p>Primary</p>
+                    </div>
+                    <div class="secondary-not-selected" *ngIf = !secondarySelected (click) = "selectSecondary($event)">
+                        <img class ="secondary-photo" src="/assets/img/person-vcard-secondary.svg"  >
+                        <p>Secondary</p>
+                    </div>
+                    <div class="secondary-selected" *ngIf = secondarySelected>
+                        <img class ="secondary-photo" src="/assets/img/person-vcard-fill-secondary.svg">
+                        <p>Secondary</p>
+                    </div>
+                </div>
+                <div *ngIf = primarySelected>
+                <div class="text-2 row">
+                    <div class="col">
+                        <h3>Primary 1</h3>
+                        <p>Students will smoothly transition into Primary school
+                         by building a robust foundation in core areas such as
+                         reading, writing, listening and speaking in English
+                         and basic concepts and problem-
+                         solving skills in Mathematics.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h3>Primary 2</h3>
+                        <p>As students find their footing in primary school, they
+                         need to build upon their foundation anchored in P1,
+                         to become confident and effective learners.
+                         We recognise that students succeed at their own
+                         pace, and have calibrated our curriculum to cater to
+                         students of different abilities.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h3>Primary 3</h3>
+                        <p>Primary 3 marks a key transition for our students, as
+                         they shoulder increased academic demands, including
+                         a new Science subject. They will be guided to solidify
+                         and expand upon the concepts and skills acquired in
+                         Lower Primary, and apply them towards higher-order
+                         tasks.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-2 row">
+                    <div class="col">
+                        <h3>Primary 4</h3>
+                        <p>As they move to Upper Primary, students need to
+                         solidify their concepts learnt in Lower Primary, while
+                         taking on more advanced skills. They will internalise
+                         new topics and concepts via our detailed concept
+                         papers and summary notes, which are complemented
+                         with study aids like mind-maps and diagrams.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h3>Primary 5</h3>
+                        <p>In Primary 5, students must cope with new test
+                         components, challenging problems, and content-
+                         intensive topics. With little time left till the Primary 6
+                         PSLE, students cannot afford to fall behind. We will
+                         help students stay ahead, and give them an
+                         advantage in preparing for the PSLE.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h3>Primary 6</h3>
+                        <p>This year, students will take the PSLE, which determines
+                         their future secondary school. We will prepare them to
+                         tackle it confidently and maximise their chances of
+                         achieving their dream results. We will also provide
+                         holistic resources beyond academics to support our
+                         students in this gruelling year.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div  *ngIf = "secondarySelected">
+                <div class="text-2 row">
+                    <div class="col">
+                        <h3>Secondary 1</h3>
+                        <p>As students embark on a new phase of their education
+                         journey in Secondary School, they must adapt to a
+                         more challenging academic environment. There are
+                         now many more subjects, with content-intensive topics,
+                         regardless of whether they are in the IP or O-Level track.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h3>Secondary 2</h3>
+                        <p>In Secondary 2, students will reinforce their academic
+                         foundation, tackle even more challenging topics and
+                         sharpen their analytical & problem-solving skills. At the
+                         end of the year, they will also choose which subjects
+                         they will study in Upper Secondary (depending on their
+                         school results in S2).
+                        </p>
+                    </div>
+                </div>
+                <div class="text-2 row">
+                    <div class="col">
+                        <h3>Secondary 3</h3>
+                        <p>The increased academic rigour in Upper Secondary is a
+                         main reason why many students struggle when they
+                         enter S3. They have to contend with the increased
+                         breadth, depth and scope of various subjects and have
+                         to elevate their linguistic skills (both written & spoken).
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h3>Secondary 4</h3>
+                        <p>Secondary 4 is a crucial academic milestone for al
+                         students (regardless of whether they are in the IP or O-
+                         Level track). The vast majority of students will face the
+                         O-Level Exam, while IP students will need to fortify their
+                         foundations for their pre-university education (be it the
+                         A-Level or IB Diploma).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class = "tutors">
+            <div class="background">
+                <div class = "overlay">
+             <div>
+                <div class="text-2">
+                    <h4>Meet Our Tutors</h4>
+                    <p>They are trained, experienced and equiped with the right resources to enhance the learning journey
+                    </p>
+                </div>                
+            <div class="profiles">
+            <div class="profile-1">    
+            <app-image-slide
+            [image1] = "'shivani-1'"
+            [image2] = "'shivani-2'"
+            [image3] = "'shivani-3'"
+            [image4] = "'shivani-4'"
+            [tutorId]= "'shivani'"
+            [country]="'Yishun, Singapore'"
+            [experience]="'Learn with Shivani - Tutoring for 6 years' "
+            [profession]="'Enrolled in NUS Law J.D. Programme'"
+
+            [age] = "'26'"
+            [race] = "'Indian'"
+            [sex] = "'Female'"
+            [yearsTeaching] = "'6'"
+            [school] = "'NUS'"
+            [language] = "'English, Chinese and Tamil'"
+            [degree] = "'B.Sc (Hons.) Major in Life Science'"
+
+            >
+            </app-image-slide>
+            </div>
+            <div class="profile-2">
+            <app-image-slide
+            [image1] = "'joseph-1'"
+            [image2] = "'joseph-2'"
+            [image3] = "'joseph-3'" 
+            [image4] = "'joseph-4'"
+            [tutorId]= "'joseph'"
+            [country]="'Clementi, Singapore'"
+            [experience]="'Learn with Joseph - Tutoring for 2 years' "
+            [profession]="'Software Developer at NETS Solution'"
+
+            [age] = "'27'"
+            [race] = "'Chinese'"
+            [sex] = "'Male'"
+            [yearsTeaching] = "'2'"
+            [school] = "'NUS'"
+            [language] = "'English and Chinese'"
+            [degree] = "'B.Sc (Hons.) Major in Applied Mathematics'"
+            >
+            </app-image-slide>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <!-- <section class = "video-cover">
+            <div class="video-mask">
+
+            </div>
+        </section> -->
+        <section class = "video-sliders">
+                <app-video-slider>
+                </app-video-slider>
+        </section>
+
+        <!--<section class = "recentStudentsAndParents">
+            <div>
+                <div class="text-2">
+                    <h4>Learn the Sweet Science</h4>
+                    <p>Here at The Sweet Science Tuition, we take learning 
+                    <br> seriously. We dive into different topics intentionally 
+                    <br> and structure our lessons accordingly to achieve better
+                    <br> academic success. We are experienced, efficient and 
+                    <br> commited to your educational journey.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class = "chatWithUs">
+            <div>
+                <div class="text-2">
+                    <h4>Learn the Sweet Science</h4>
+                    <p>Here at The Sweet Science Tuition, we take learning 
+                    <br> seriously. We dive into different topics intentionally 
+                    <br> and structure our lessons accordingly to achieve better
+                    <br> academic success. We are experienced, efficient and 
+                    <br> commited to your educational journey.
+                    </p>
+                </div>
+            </div>
+        </section> -->
+
+</div>
+

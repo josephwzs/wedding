@@ -1,0 +1,74 @@
+<div   #videoId  (onmousemove) = "videoMask($event)" (mouseout) ="mouseEntered = 0; dynamicBackGround = 'rgba(201, 201, 201, .9)'" (mouseover) ="mouseEntered = 1">
+<div class="video-mask" [ngStyle] = "{'background': dynamicBackGround}">
+    <p class = "mesage">
+        DISCOVER THE BEAUTY OF LEARNING
+    </p>
+</div>
+<div id="slider" class="videoSliders" >
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    <input type="radio" name="slider" id="slide4">
+    <div id = "slides">
+        <div id="overflow">
+            <div class="inner">
+                <div class="slide slide_1">
+                    <div class="slide-content">
+                        <video #first_video autoplay muted onloadedmetadata="this.muted = true" loop >
+                            <source src="/assets/media/nature-1080.mp4" type="video/mp4">
+                        </video>
+                        <!-- <h4>Slide 1</h4>
+                        <p>Content for Slide 1</p> -->
+                    </div>
+                </div>
+                <div class="slide slide_2">
+                    <div class="slide-content">
+                        <video #first_video autoplay muted onloadedmetadata="this.muted = true" loop>
+                            <source src="/assets/media/sea-1080.mp4" type="video/mp4">
+                        </video>
+                        <!-- <h4>Slide 2</h4>
+                        <p>Content for Slide 2</p> -->
+                        
+                    </div>
+                </div>
+                <div class="slide slide_3">
+                    <div class="slide-content">
+                        <video #first_video autoplay muted  onloadedmetadata="this.muted = true" loop>
+                            <source src="/assets/media/sky.mp4" type="video/mp4">
+                        </video>
+                        <!-- <h4>Slide 3</h4>
+                        <p>Content for Slide 3</p> -->
+                    </div>
+                </div>
+                <div class="slide slide_4">
+                    <div class="slide-content">
+                        <video #first_video autoplay muted  onloadedmetadata="this.muted = true" loop>
+                            <source src="/assets/media/space-1080.mp4" type="video/mp4">
+                        </video>
+                        <!-- <h4>Slide 4</h4>
+                        <p>Content for Slide 4</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="controls">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+        <label for="slide4"></label>
+    </div>
+    <div id="bullets">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+        <label for="slide4"></label>
+    </div>
+    <!-- <div class="title-box">            
+        <h4>{{ country }}</h4>
+        <p>{{ experience }}
+        <br>{{ profession }}
+        </p>
+    </div> -->
+    </div>
+</div>

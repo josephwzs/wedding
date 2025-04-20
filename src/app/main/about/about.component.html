@@ -1,0 +1,237 @@
+<!-- <div   #videoId  (onmousemove) = "videoMask($event)" (mouseout) ="mouseEntered = 0; dynamicBackGround = 'rgba(201, 201, 201, .9)'" (mouseover) ="mouseEntered = 1">
+  <div class="video-mask" [ngStyle] = "{'background': dynamicBackGround}"> -->
+
+<!-- </div> -->
+<app-side-bars></app-side-bars>
+<div class="proposal-video-style">
+  <video #first_video autoplay loop width="100%" height="auto">
+    <source src="/assets/media/proposal.mp4" type="video/mp4" />
+  </video>
+</div>
+<div class="about-wrapper">
+  <section id="RSVP" class="introduction">
+    <div class="col">
+      <div class="text">
+        <h2>Joseph & Shivani</h2>
+        <h3>30|08|25</h3>
+        <h3>Sky Garden Sentosa</h3>
+        <p class="WhispSig">
+          We're getting<br />
+          <span class="colored-pink">married</span><br />
+        </p>
+        <h3><a href="https://withjoy.com/joseph-and-shivani-aug-25/rsvp" class="rsvp-button">RSVP</a></h3>
+      </div>
+    </div>
+  </section>
+  <div class="overlay-background">
+    <section id="ABOUT" class="about-me">
+      <div class="col">
+        <div class="text">
+          <h3>ABOUT US</h3>
+          <p class="about-us-text">
+            We met 8 years ago in Ha Giang, a village in Vietnam during our community servive trip in Vietnam!<br />
+          He found Shivani really funny and amazing (i promise this is written by Joseph) <br />
+          <br /></p>
+        </div>
+      </div>
+    </section>
+    <section class="introduction"><app-image-slider></app-image-slider></section>
+    <section id="Q&A" class="programmes">
+      <div>
+        <div class="text-2">
+          <h4>INFORMATION</h4>
+        </div>
+        <div class="filter">
+          <div
+            class="primary-not-selected"
+            *ngIf="!primarySelected"
+            (click)="selectPrimary($event)"
+          >
+            <img class="primary-photo" src="/assets/img/q&a-unselected.svg" />
+            <p>Q&A</p>
+          </div>
+          <div class="primary-selected" *ngIf="primarySelected">
+            <img class="primary-photo" src="/assets/img/q&a-selected.svg" />
+            <p>Q&A</p>
+          </div>
+          <div
+            class="secondary-not-selected"
+            *ngIf="!secondarySelected"
+            (click)="selectSecondary($event)"
+          >
+            <img
+              class="secondary-photo"
+              src="/assets/img/schedule-unselected.svg"
+            />
+            <p>Schedule</p>
+          </div>
+          <div class="secondary-selected" *ngIf="secondarySelected">
+            <img
+              class="secondary-photo"
+              src="/assets/img/schedule-selected.svg"
+            />
+            <p>Schedule</p>
+          </div>
+        </div>
+        <div *ngIf="primarySelected">
+          <div class="text-2 row">
+            <div class="col">
+              <h3>Dress Code</h3>
+              <p>
+                On the dress code, we love you to come in anything that makes
+                you comfortable. There's no particular theme (yet) but for men -
+                do come in long pants and covered shoes.
+              </p>
+            </div>
+            <div class="col">
+              <h3>Parking</h3>
+              <p>Parking is available at "elaborate".</p>
+            </div>
+            <div class="col">
+              <h3>+ 1</h3>
+              <p>No to no to the no no no.</p>
+            </div>
+          </div>
+          <div class="text-2 row">
+            <div class="col">
+              <h3>Q&A 4</h3>
+              <p>heeeelp what else should i put</p>
+            </div>
+            <div class="col">
+              <h3>Q&A 5</h3>
+              <p>test</p>
+            </div>
+            <div class="col">
+              <h3>Q&A 6</h3>
+              <p>test</p>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="secondarySelected">
+          <div class="text-2 row">
+            <div class="col">
+              <h3>Solemnisation</h3>
+              <p>shivani better say yes!!!</p>
+            </div>
+            <div class="col">
+              <h3>Drinks</h3>
+              <p>No drinks. please dehydrate.</p>
+            </div>
+          </div>
+          <div class="text-2 row">
+            <div class="col">
+              <h3>food</h3>
+              <p>roti prata char kway teow</p>
+            </div>
+            <div class="col">
+              <h3>After Party</h3>
+              <p>
+                its too late, and we have no money. please kindly excuse
+                yourself.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="VENUE" class="travel">
+      <div class="header-style">
+        <div class="width-style">
+          <h3>Venue</h3>
+        </div>
+      </div>
+
+      <div class="directions">
+        <iframe
+          class="include-border google-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8657096833012!2d103.81499210870963!3d1.252066598730743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1b5fd0864ee7%3A0x56f285cf2d40073!2sSky%20Garden%20Sentosa!5e0!3m2!1sen!2ssg!4v1743186206987!5m2!1sen!2ssg"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="direction-words">
+          <div class="text-3">
+            <img class="icon-a" src="/assets/img/map.svg" />
+            <div>
+              If you need directions on geting to Sentosa, please
+              <a
+                class="hover-underline-animation link"
+                href="https://www.google.com/maps/dir//1.2520666,103.8175724/@1.252067,103.817572,16z?hl=en&entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                >click here</a
+              >
+            </div>
+          </div>
+
+          <div class="text-3">
+            <img class="icon-a" src="/assets/img/location.svg" />43 Siloso Beach
+            Walk, Singapore 099010 (beside Beach Station)
+          </div>
+          <div class="text-3">
+            <img class="icon-a" src="/assets/img/train-2.svg" />
+            <a
+              class="hover-underline-animation link"
+              href="https://www.sentosa.com.sg/en/things-to-do/attractions/sentosa-express/"
+              target="_blank"
+              >Sentosa Express, 7am - 12am</a
+            >
+          </div>
+          <div class="text-3">
+            <img class="icon-a" src="/assets/img/panel.svg" />
+            <a
+              class="hover-underline-animation link"
+              href="https://www.sentosa.com.sg/en/getting-to-sentosa"
+              target="_blank"
+              >Other ways to get there</a
+            >
+          </div>
+        </div>
+      </div>
+
+     <object
+        class="include-border virtual-map"
+        data="https://skygardensentosa.com/virtual-tour/?gad_source=1&gclid=Cj0KCQjwkZm_BhDrARIsAAEbX1HEc3pGYkwoyZUICW8RvPvt5xnEsDHvuTKl8BOzvOPuWwkSgT6s3k0aAqLvEALw_wcB"
+        width="600"
+        height="400"
+      >
+        <embed
+          src="https://skygardensentosa.com/virtual-tour/?gad_source=1&gclid=Cj0KCQjwkZm_BhDrARIsAAEbX1HEc3pGYkwoyZUICW8RvPvt5xnEsDHvuTKl8BOzvOPuWwkSgT6s3k0aAqLvEALw_wcB"
+          width="600"
+          height="400"
+        />
+      </object>
+    </section>
+
+    <!-- <section class="Connect">
+    <div id="CONNECT" class="Connect">
+      <div class="col">
+        <div class="text">
+          <div class="header-style">
+            <div class="width-style">
+              <h3>Connect</h3>
+              
+            </div>
+          </div>
+          <div class="insta">
+            <div class="insta-item"><img class="icon-b" src="/assets/img/insta-2.svg" /> <a
+              class="insta-link smooth-hover"
+              href="https://www.instagram.com/shiffythecow_/"
+              target="_blank"
+              >shiffythecow_</a
+            ></div>
+            <div class="insta-item"><img class="icon-b" src="/assets/img/insta-2.svg" /> <a
+              class="insta-link smooth-hover"
+              href="https://www.instagram.com/joseph_wzs/"
+              target="_blank"
+              >Joseph_wzs</a
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>

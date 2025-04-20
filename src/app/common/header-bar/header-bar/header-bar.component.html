@@ -1,0 +1,47 @@
+  <header>
+    <div class="navbar">
+      <img class ="logo" src="/assets/img/science-icon.png">
+      <ul class="items">
+        <li><a class="item" href="/home">Home</a></li>
+        <li><a class="item" href="#">About Us</a></li>
+        <li><a class="item" href="#">Contact Us</a></li>
+        <li>  
+          <a class="item dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          (click) = "openProgramems($event)">
+          Our Programmes  &#x25BE;
+          </a>
+        <ul class="dropdown-menu programmes" >
+          <li><a class="dropdown-item" href="#">Overview</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Math</a></li>
+          <li><a class="dropdown-item" href="#">Physics</a></li>
+          <li><a class="dropdown-item" href="#">Chemistry</a></li>
+          <li><a class="dropdown-item" href="#">Biology</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Primary Math</a></li>
+          <li><a class="dropdown-item" href="#">Primary Science</a></li>
+        </ul></li>
+      </ul>
+      <div class = "register">
+        <a class="signUp" href="/signUp">Sign Up</a>
+        <a class="login" href="/login">Login</a>
+      </div>
+      <div class="toggle_btn" (click) = "openDropDown($event)">
+        <img class ="bars" src="/assets/img/bars-solid.svg" *ngIf= !isOpen>
+        <img class ="bars" src="/assets/img/x-solid.svg"  *ngIf= isOpen>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <ul class="items">
+        <li><a class="item" href="#">Home</a></li>
+        <li><a class="item" href="#">About Us</a></li>
+        <li><a class="item" href="#">Contact Us</a></li>
+        <li><a class="item" href="#">Our Programmes</a></li>
+        <li><a class="signUp" href="/signUp">Sign Up</a></li>
+        <li><a class="login" href="/login">Login</a></li>
+      </ul>
+    </div>
+
+</header>
+
+

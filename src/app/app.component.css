@@ -1,0 +1,13 @@
+.body{
+    width: 100vw;
+    height: 300vh;
+    background-size: cover;
+    background: rgba(220, 220, 220, .9) center center fixed;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    z-index: 40;
+}
+/* .header{
+    position: fixed;
+} */

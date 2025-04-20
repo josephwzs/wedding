@@ -1,0 +1,10 @@
+<div class="group-panel">
+    <div class="d-flex justify-content-between title-row">
+    <h3><span>{{ title }}</span></h3>
+    <ng-content select= "[panelActions]"></ng-content>
+    </div>
+    <ng-content></ng-content>
+</div>
+<div>
+    <ng-content select="[groupPanelFooter]"></ng-content>
+</div>

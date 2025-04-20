@@ -1,0 +1,246 @@
+.limiter {
+    margin: 0;
+    padding: 0;
+}
+.background {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    /* min-height: 50vh; */
+    /* min-width: 100vw; */
+    overflow: hidden;
+    background-size: 200px 300px;
+    background: url("/assets/img/background-5.jpg") center center fixed;
+    /* z-index: -2; */
+}
+.overlay {
+    min-width: 100vw;
+    min-height: 50rem;
+    background-size: cover;
+    background: rgba(240, 240, 240, .95) center center fixed;
+    display: flex;
+    /* z-index: -1; */
+    position: relative;
+    justify-content: center;
+}
+.row{
+    display: flex;
+    top: 100px;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    z-index: 2;
+}
+.col{
+    height: 5vh;
+}
+.feature-image{
+    justify-content: flex-end;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin: 0px;
+    padding-right: 20px;
+    flex-wrap: unset;
+
+}
+.image-1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.play-btn{
+    position: absolute;
+    width: 6rem;
+    align-self: center;
+    cursor: pointer;
+    opacity: 75%;
+    z-index: 3;
+    transition: scale 0.3 ease;
+}
+.play-btn:hover{
+    opacity: 90%;
+    scale: 1.1;
+}
+.play-btn:active{
+    scale: 0.9;
+}
+.banner{
+    position: relative;
+    width: 50rem;
+    height: auto;
+    border-radius: 10px;
+}
+.text-1 h4{
+    font-size: 4rem;
+    color: rgba(66, 66, 66, .9);
+}
+.text-1 {
+    font-size: 2rem;
+    color: rgba(66, 66, 66, .7);
+}
+.aboutUs {
+    text-decoration: none;
+    color: rgba(104, 192, 227);
+    cursor: pointer;
+}
+.aboutUs:hover {
+    text-decoration: underline;
+}
+.signUp{
+    text-decoration: none;
+    background-color: rgba(104, 192, 227);
+    color: rgba(240, 240, 240);
+    padding: .5rem 1.5rem;
+    margin-right: 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.video-player{
+    top: 100px;
+    position: fixed;
+    align-self: center;
+    z-index: 4;
+}
+video:focus{
+    outline: none;
+}
+video{
+    border-radius: 20px;
+}
+.close-btn{
+    position: absolute;
+    width: 3rem;
+    align-self: center;
+    cursor: pointer;
+    opacity: 75%;
+    z-index: 5;
+    margin-left: -4rem;
+    margin-top: 1rem;
+    transition: scale 0.3 ease;
+}
+.close-btn:hover{
+    opacity: 90%;
+    scale: 1.1;
+}
+.close-btn:active{
+    scale: 0.9;
+}
+
+
+/* section */
+section{
+    min-height: 50rem;
+}
+
+.text-2 h4{
+    font-size: 2rem;
+    color: rgba(66, 66, 66, .9);
+}
+.text-2 {
+    font-size: 1.5rem;
+    color: rgba(66, 66, 66, .7);
+}
+
+/* Programes */
+.programmes{
+    width: 100vw;
+    /* margin: auto; */
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+.text-2.row .col{
+    flex-basis: 20rem;
+    padding: 2rem;
+    margin: 2rem;
+    box-sizing: border-box;
+    background: rgba(230, 230, 230, 0.7);
+    height: 30rem;
+    width: 40rem;
+    border-radius: 15px;
+    overflow-y: hidden;
+    cursor: pointer;
+}
+.text-2.row .col p{
+    text-align: left;
+}
+.filter{
+    margin-top: 1rem;
+    display: inline-flex;
+    gap: 4rem;
+    margin-bottom: -10rem;
+}
+.filter p{
+    color: rgba(143, 143, 143);
+    font-weight: 500;
+    font-size: 1rem;
+}
+.filter img{
+    height: 3rem;
+}
+.filter .primary-not-selected{
+    cursor: pointer;
+}
+.filter .primary-not-selected:hover{
+    border-bottom: 3px solid  rgba(179, 179, 179, 0.4);
+}
+.primary-selected p{
+    color: rgba(0, 0, 0);
+}
+.primary-selected {
+    border-bottom: 3px solid  rgba(0,0,0);
+}
+
+
+.filter .secondary-not-selected{
+    cursor: pointer;
+}
+.filter .secondary-not-selected:hover{
+    border-bottom: 3px solid  rgba(179, 179, 179, 0.4);
+}
+.secondary-selected p{
+    color: rgba(0, 0, 0);
+}
+.secondary-selected {
+    border-bottom: 3px solid  rgba(0,0,0);
+}
+/* tutors */
+.tutors{
+    text-align: center;
+    padding-top: 5rem;
+    /* padding-bottom: 5rem; */
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+.profiles{
+    display: inline-flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.tutors .text-2{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.video-sliders{
+    background: linear-gradient(#9fcbd4,white);
+}
+
+/* .video-cover{
+    z-index: 20;
+    position: relative;
+    margin-bottom: -100vh;
+    background: rgba(66, 66, 66, .5);
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid rgba(66, 66, 66, .9);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+} */

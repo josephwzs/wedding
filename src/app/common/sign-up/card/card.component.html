@@ -1,0 +1,83 @@
+<ng-template let-modal>
+    <div class = "modal-header">
+        <button class="close" (click)= "modal.dismiss('Cross click')">
+            <span  class="x">&times;</span>
+        </button>
+    </div>
+<div class="card modal-body">
+    <form [formGroup]= "formGroup">
+
+      
+      
+      <div class="card__row">
+        <div class="card__col">
+          <label for="bankName" class="card__label">{{ screenLabels['lbl_bankName'] }}</label
+          ><input
+            type="text"
+            class="card__input card__input--large1 form-control"
+            id="bankName"
+            formControlName = "bankName"
+            required = 'true'
+            maxlength="20"
+          />
+        </div>
+      </div>
+      
+      
+      <div class="card__row">
+        <div class="card__col">
+          <label for="cardNumber" class="card__label" >{{ screenLabels['lbl_cardNumber'] }}</label
+          ><input
+            type="text"
+            class="card__input card__input--large form-control"
+            id="cardNumber1"
+            placeholder="xxxx-xxxx-xxxx-xxxx"
+            formControlName = "cardNumber"
+            required = 'true'
+          />
+        </div>
+        <div class="card__col card__chip">
+          <img src="/assets/img/chip.svg" alt="chip" />
+        </div>
+      </div>
+      <div class="card__row">
+        <div class="card__col">
+          <label for="cardExpiry" class="card__label">{{ screenLabels['lbl_expiryDate'] }}</label
+          ><input
+            type="text"
+            class="card__input form-control"
+            id="cardExpiry1"
+            placeholder="MM/YY"
+            formControlName = "cardExpiry"
+            required = 'true'
+          />
+        </div>
+        <div class="card__col">
+          <label for="cardCcv" class="card__label">{{ screenLabels['lbl_ccv'] }}</label
+          ><input
+            type="text"
+            class="card__input form-control"
+            id="cardCcv1"
+            placeholder="xxx"
+            formControlName = "cardCcv"
+            required = 'true'
+          />
+        </div>
+        <div class="card__col card__brand" >
+            <fa-icon *ngIf = "!!faIcon" [icon]= "faIcon"></fa-icon>
+        </div>
+        
+
+      </div>
+      <button type="button" class="button3" id="addButton" 
+      (click)= "addCreditCard($event)"
+      [disabled] = "!isAddEnabled()"
+      readonly = "!isSubmitEnabled()"
+      
+      >{{ screenLabels['btn_ADD'] }}</button>
+
+    </form>
+  </div>
+
+<!-- </div> -->
+</ng-template>

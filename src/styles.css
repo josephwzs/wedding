@@ -6,6 +6,18 @@
     font-family: 'WhispSig';
     src: url('assets/fonts/WhisperingSignature.ttf') format('truetype');
   }
+@font-face {
+    font-family: 'CheesePotato';
+    src: url('assets/fonts/CheesePotato.otf') format('opentype');
+  }
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@font-face {
+  font-family: 'AcademyEngraved';
+  src: url('assets/fonts/AcademyEngravedLetPlain.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html {
     font-family: "Open Sans", "sans-serif", "WhispSig";

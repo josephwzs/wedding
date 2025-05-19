@@ -15,22 +15,30 @@ export class SideBarsComponent {
 
   onClick(){
   const mediaElements = document.querySelectorAll<HTMLMediaElement>('audio, video');
-  mediaElements.forEach((media: HTMLMediaElement) => {
-    media.muted = true;
+  if(!this.isMuted){
+    mediaElements.forEach((media: HTMLMediaElement) => {
+      media.muted = true;
+    });
+    this.isMuted = true
+  }else{
+        mediaElements.forEach((media: HTMLMediaElement) => {
+      media.muted = false
   });
-  this.isMuted = true
+  this.isMuted = false
+  }
+
 };
 
 
 
   
-  offClick(){
-    const mediaElements = document.querySelectorAll<HTMLMediaElement>('audio, video');
-    mediaElements.forEach((media: HTMLMediaElement) => {
-      media.muted = false
-});
-this.isMuted = false
-  }
+//   offClick(){
+//     const mediaElements = document.querySelectorAll<HTMLMediaElement>('audio, video');
+//     mediaElements.forEach((media: HTMLMediaElement) => {
+//       media.muted = false
+// });
+// this.isMuted = false
+//   }
 
   onSelect(id:string){
     document.getElementById(id)!.scrollIntoView({ 

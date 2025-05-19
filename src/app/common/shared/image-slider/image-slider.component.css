@@ -19,7 +19,7 @@
   .slide-track {
     display: flex;
     flex-wrap: nowrap;
-    animation: scroll-left 40s linear infinite;
+    animation: scroll-left 70s linear infinite;
   }
   
   .slider:hover .slide-track {
@@ -36,6 +36,8 @@
   }
 
 
+
+
   .slide-track img {
     width: 20rem;
     object-fit: cover;
@@ -45,6 +47,10 @@
     transition: transform 0.3s ease;
   }
   
+  .translate-left {
+    object-position: 80% 50%;;
+  }
+
   .slide-track img:hover {
     transform: scale(1.08);
   }
@@ -62,13 +68,13 @@
     }
   }
   
-  /* Infinite seamless scroll */
+  /* Infinite seamless scroll -336 */
   @keyframes scroll-left {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-336rem);
+      transform: translateX(-1071rem);
     }
   }
   

@@ -1,7 +1,4 @@
-<!-- <div   #videoId  (onmousemove) = "videoMask($event)" (mouseout) ="mouseEntered = 0; dynamicBackGround = 'rgba(201, 201, 201, .9)'" (mouseover) ="mouseEntered = 1">
-  <div class="video-mask" [ngStyle] = "{'background': dynamicBackGround}"> -->
-
-<!-- </div> -->
+<div class="custom-cursor"></div>
 <app-side-bars></app-side-bars>
 <div class="proposal-video-style">
   <video #first_video autoplay loop width="100%" height="auto">
@@ -10,125 +7,80 @@
 </div>
 <div class="about-wrapper">
   <section id="RSVP" class="introduction">
-    <div class="col">
-      <div class="text">
-        <h2>Joseph & Shivani</h2>
+    <div class="col reveal">
+      <div class="text not-hover-target">
+        <p class="WhispSig">Joseph & Shivani</p>
         <h3>30|08|25</h3>
-        <h3>Sky Garden Sentosa</h3>
-        <p class="WhispSig">
+        <!-- <h3>Sky Garden Sentosa</h3> -->
+        <!-- <p class="WhispSig">
           We're getting<br />
           <span class="colored-pink">married</span><br />
-        </p>
-        <h3><a href="https://withjoy.com/joseph-and-shivani-aug-25/rsvp" class="rsvp-button">RSVP</a></h3>
+        </p> -->
+        <div class="rsvp">
+          <div class="center">
+            <button class="start-button-1st" (click)="rsvp()">R S V P</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <div class="overlay-background">
     <section id="ABOUT" class="about-me">
       <div class="col">
-        <div class="text">
+        <div class="text hover-target">
           <h3>ABOUT US</h3>
-          <p class="about-us-text">
-            We met 8 years ago in Ha Giang, a village in Vietnam during our community servive trip in Vietnam!<br />
-          He found Shivani really funny and amazing (i promise this is written by Joseph) <br />
-          <br /></p>
+          <p class="about-us-text fade-text">We first met eight years ago in the village of Ha Giang during a community service trip in Vietnam.
+            That’s where he discovered just how funny and amazing Shivani is!
+            (And yes, this is definitely written by Joseph - I promise!)
+          </p>
         </div>
       </div>
     </section>
-    <section class="introduction"><app-image-slider></app-image-slider></section>
-    <section id="Q&A" class="programmes">
-      <div>
-        <div class="text-2">
-          <h4>INFORMATION</h4>
-        </div>
-        <div class="filter">
-          <div
-            class="primary-not-selected"
-            *ngIf="!primarySelected"
-            (click)="selectPrimary($event)"
-          >
-            <img class="primary-photo" src="/assets/img/q&a-unselected.svg" />
-            <p>Q&A</p>
-          </div>
-          <div class="primary-selected" *ngIf="primarySelected">
-            <img class="primary-photo" src="/assets/img/q&a-selected.svg" />
-            <p>Q&A</p>
-          </div>
-          <div
-            class="secondary-not-selected"
-            *ngIf="!secondarySelected"
-            (click)="selectSecondary($event)"
-          >
-            <img
-              class="secondary-photo"
-              src="/assets/img/schedule-unselected.svg"
-            />
-            <p>Schedule</p>
-          </div>
-          <div class="secondary-selected" *ngIf="secondarySelected">
-            <img
-              class="secondary-photo"
-              src="/assets/img/schedule-selected.svg"
-            />
-            <p>Schedule</p>
-          </div>
-        </div>
-        <div *ngIf="primarySelected">
-          <div class="text-2 row">
-            <div class="col">
-              <h3>Dress Code</h3>
-              <p>
-                On the dress code, we love you to come in anything that makes
-                you comfortable. There's no particular theme (yet) but for men -
-                do come in long pants and covered shoes.
-              </p>
-            </div>
-            <div class="col">
-              <h3>Parking</h3>
-              <p>Parking is available at "elaborate".</p>
-            </div>
-            <div class="col">
-              <h3>+ 1</h3>
-              <p>No to no to the no no no.</p>
+    <section class="image-slider normal-hover-target"><app-image-slider></app-image-slider></section>
+   
+    <section class="experience not-hover-target" id="SCHEDULE">
+      <div class="col not-hover-target">
+        <div class="text">
+          <div class="header-style">
+            <div class="width-style">
+              <h3>Schedule</h3>
             </div>
           </div>
-          <div class="text-2 row">
-            <div class="col">
-              <h3>Q&A 4</h3>
-              <p>heeeelp what else should i put</p>
-            </div>
-            <div class="col">
-              <h3>Q&A 5</h3>
-              <p>test</p>
-            </div>
-            <div class="col">
-              <h3>Q&A 6</h3>
-              <p>test</p>
+          <div class="border-style">
+            <div class="width-style">
+              <h4>6:30 PM</h4>
+              <div class="workplace">
+                Doors Open
+                <div><h4>Enjoy the live band and take photos at the photobooth!</h4></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div *ngIf="secondarySelected">
-          <div class="text-2 row">
-            <div class="col">
-              <h3>Solemnisation</h3>
-              <p>shivani better say yes!!!</p>
-            </div>
-            <div class="col">
-              <h3>Drinks</h3>
-              <p>No drinks. please dehydrate.</p>
+          <div class="border-style">
+            <div class="width-style">
+              <h4>7:00 PM</h4>
+  
+              <div class="workplace">
+                Ceremony begins
+                <div><h4>Please be seated.</h4></div>
+              </div>
             </div>
           </div>
-          <div class="text-2 row">
-            <div class="col">
-              <h3>food</h3>
-              <p>roti prata char kway teow</p>
+          <div class="border-style">
+            <div class="width-style">
+              <h4>7:30 PM</h4>
+              <div class="workplace">
+                Its time for food!
+                <div><h4>Enjoy Indian and Chinese food and our suprise live stations!</h4></div>
+              </div>
             </div>
-            <div class="col">
-              <h3>After Party</h3>
-              <p>
-                its too late, and we have no money. please kindly excuse
-                yourself.
-              </p>
+          </div>
+          <div class="border-style">
+            <div class="width-style">
+              <h4>10:00 PM</h4>
+              <div class="workplace">
+                Ceremony ends
+                <div><h4> Thank you for joining us, the dance floor is open :)</h4></div>
+              </div>
             </div>
           </div>
         </div>
@@ -136,15 +88,16 @@
     </section>
 
     <section id="VENUE" class="travel">
+      <div class="venue-border">
       <div class="header-style">
         <div class="width-style">
           <h3>Venue</h3>
         </div>
       </div>
 
-      <div class="directions">
+      <div class="directions normal-hover-target">
         <iframe
-          class="include-border google-map"
+          class="include-border google-map not-hover-target"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8657096833012!2d103.81499210870963!3d1.252066598730743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1b5fd0864ee7%3A0x56f285cf2d40073!2sSky%20Garden%20Sentosa!5e0!3m2!1sen!2ssg!4v1743186206987!5m2!1sen!2ssg"
           width="600"
           height="450"
@@ -155,17 +108,18 @@
         ></iframe>
         <div class="direction-words">
           <div class="text-3">
-            <img class="icon-a" src="/assets/img/map.svg" />
+            <img class="icon-a " src="/assets/img/map.svg" />
             <div>
               If you need directions on geting to Sentosa, please
               <a
-                class="hover-underline-animation link"
+                class="hover-underline-animation link not-hover-target"
                 href="https://www.google.com/maps/dir//1.2520666,103.8175724/@1.252067,103.817572,16z?hl=en&entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 >click here</a
               >
             </div>
           </div>
+        
 
           <div class="text-3">
             <img class="icon-a" src="/assets/img/location.svg" />43 Siloso Beach
@@ -174,7 +128,7 @@
           <div class="text-3">
             <img class="icon-a" src="/assets/img/train-2.svg" />
             <a
-              class="hover-underline-animation link"
+              class="hover-underline-animation link not-hover-target"
               href="https://www.sentosa.com.sg/en/things-to-do/attractions/sentosa-express/"
               target="_blank"
               >Sentosa Express, 7am - 12am</a
@@ -183,7 +137,7 @@
           <div class="text-3">
             <img class="icon-a" src="/assets/img/panel.svg" />
             <a
-              class="hover-underline-animation link"
+              class="hover-underline-animation link not-hover-target"
               href="https://www.sentosa.com.sg/en/getting-to-sentosa"
               target="_blank"
               >Other ways to get there</a
@@ -191,9 +145,10 @@
           </div>
         </div>
       </div>
+    </div>
 
      <object
-        class="include-border virtual-map"
+        class="include-border virtual-map not-hover-target"
         data="https://skygardensentosa.com/virtual-tour/?gad_source=1&gclid=Cj0KCQjwkZm_BhDrARIsAAEbX1HEc3pGYkwoyZUICW8RvPvt5xnEsDHvuTKl8BOzvOPuWwkSgT6s3k0aAqLvEALw_wcB"
         width="600"
         height="400"
@@ -204,6 +159,76 @@
           height="400"
         />
       </object>
+    
+    </section>
+
+    <section class="tech-stack not-hover-target" id="Q&A">
+      <div class="col not-hover-target">
+        <div class="text fade-text2">
+          <div class="header-style">
+            <div class="width-style">
+              <h3>Q&A</h3>
+            </div>
+          </div>
+          <div class="border-style">
+            <div class="width-style">
+              <b>Outfit</b><small> Anything that you love and feel comfortable in !</small>
+            </div>
+          </div>
+          <div class="border-style">
+            <div class="width-style">
+              <b>Parking</b
+              ><small
+                >Nearest carpark - 
+                <a
+                class="link not-hover-target"
+                href="https://maps.app.goo.gl/BgMRYBpHx6oXdqFRA"
+                target="_blank"
+                >beach station</a
+              >, 24hr</small
+              >
+            </div>
+          </div>
+          <div class="border-style">
+            <div class="width-style">
+              <b>SENTOSA EXPRESS</b><small>Nearest Station: Beach Station (7:00 AM – 12:00 AM)</small>
+            </div>
+          </div>
+          <div class="border-style">
+            <div class="width-style">
+              <b >+ 1</b><small>Due to limited seating, we are able to accomodate the guests listed on the invite :)</small>
+            </div>
+          </div>
+          <div class="border-style">
+            <div class="width-style">
+              <b>Food</b
+              ><small> Get your stomachs ready for both indian and chinese food.</small>
+            </div>
+          </div>
+          <div class="border-style">
+            <div class="width-style">
+              <b>Drinks</b
+              ><small> We will serve both alcoholic and non-alocholic drinks.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="end end-template">
+      <div class="col">
+        <div class="text hover-target center">
+          <p class="fade-text-3">
+        <span class="colored-pink">"</span>Thanks for being part of our lives so far. We<span class="colored-pink">'</span>d really love for you to join us and celebrate this moment together!<span class="colored-pink">"</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="end-rsvp not-hover-target">
+      <div class="center">
+        <button class="start-button" (click)="rsvp()">R S V P</button>
+      </div>
     </section>
 
     <!-- <section class="Connect">
